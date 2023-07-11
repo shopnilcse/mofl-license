@@ -1,0 +1,135 @@
+#######################################################
+## @author   Md. Mushfiq Fuad                        ##
+## @version  1.1                                     ##
+## @since    14 Mar, 2022                            ##
+#######################################################
+
+databaseChangeLog:
+  - changeSet:
+      id: create license_noc_statuses table
+      author: lnm-service Md. Mushfiq Fuad
+      changes:
+        - createTable:
+            tableName: license_noc_statuses
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(150)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status_slug
+                  type: varchar(150)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: is_submitted
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+                  defaultValue: 0
+              - column:
+                  name: is_application_approved
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+                  defaultValue: 0
+              - column:
+                  name: is_application_fee_paid
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+                  defaultValue: 0
+              - column:
+                  name: is_verified
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+                  defaultValue: 0
+              - column:
+                  name: is_verification_fee_paid
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+                  defaultValue: 0
+              - column:
+                  name: is_lab_tested
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+                  defaultValue: 0
+              - column:
+                  name: is_lab_fee_paid
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+                  defaultValue: 0
+              - column:
+                  name: is_final_approved
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+                  defaultValue: 0
+              - column:
+                  name: is_attachment_approved
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+                  defaultValue: 0
+              - column:
+                  name: is_certificate_fee_paid
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+                  defaultValue: 0
+              - column:
+                  name: is_certificate_issued
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+                  defaultValue: 0
+              - column:
+                  name: is_enothi_approved
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+                  defaultValue: 0
+              - column:
+                  name: is_certificate_expired
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+                  defaultValue: 0
+              - column:
+                  name: is_certificate_renewed
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+                  defaultValue: 0
+              - column:
+                  name: created_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_by
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_by
+                  type: BIGINT
+                  constraints:
+                    nullable: false

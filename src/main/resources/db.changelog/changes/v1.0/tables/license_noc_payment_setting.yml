@@ -1,0 +1,89 @@
+#######################################################
+## @author   Md. Mushfiq Fuad                        ##
+## @version  1.0                                     ##
+## @since    23 Jan, 2022                            ##
+#######################################################
+
+databaseChangeLog:
+  - changeSet:
+      id: create license_noc_payment_settings table
+      author: lnm-service Md. Mushfiq Fuad
+      changes:
+        - createTable:
+            tableName: license_noc_payment_settings
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: base_type
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: category_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: application_fee
+                  type: Double
+                  constraints:
+                    nullable: true
+              - column:
+                  name: verification_fee
+                  type: Double
+                  constraints:
+                    nullable: true
+              - column:
+                  name: certificate_fee
+                  type: Double
+                  constraints:
+                    nullable: true
+              - column:
+                  name: has_application_fee
+                  type: Boolean
+                  constraints:
+                    nullable: false
+                  defaultValue: 0
+              - column:
+                  name: has_verification_fee
+                  type: Boolean
+                  constraints:
+                    nullable: false
+                  defaultValue: 0
+              - column:
+                  name: has_labtest_fee
+                  type: Boolean
+                  constraints:
+                    nullable: false
+              - column:
+                  name: has_certificate_fee
+                  type: Boolean
+                  constraints:
+                    nullable: false
+                  defaultValue: 0
+              - column:
+                  name: created_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_by
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_by
+                  type: BIGINT
+                  constraints:
+                    nullable: false

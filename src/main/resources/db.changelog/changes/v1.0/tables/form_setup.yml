@@ -1,0 +1,81 @@
+#######################################################
+## @author   Md. Emran Hossain                       ##
+## @version  1.0                                     ##
+## @since    20 Jan, 2022                            ##
+#######################################################
+
+databaseChangeLog:
+  - changeSet:
+      id: create form_setups table
+      author: lnm-service Md. Emran Hossain
+      changes:
+        - createTable:
+            tableName: form_setups
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: base_type
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: category_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: has_field_verification
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+                  defaultValue: 0
+              - column:
+                  name: has_lab_test
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+                  defaultValue: 0
+              - column:
+                  name: has_application_payment
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+                  defaultValue: 0
+              - column:
+                  name: has_process_payment
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+                  defaultValue: 0
+              - column:
+                  name: is_active
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+                  defaultValue: 0
+              - column:
+                  name: created_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_by
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_by
+                  type: BIGINT
+                  constraints:
+                    nullable: false

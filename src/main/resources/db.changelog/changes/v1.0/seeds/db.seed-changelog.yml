@@ -1,0 +1,101 @@
+#######################################################
+## @author   Md. Emran Hossain                       ##
+## @version  1.0                                     ##
+## @since    20 Jan, 2022                            ##
+#######################################################
+
+databaseChangeLog:
+  -   changeSet:
+        id: populate tables
+        author: lnm-service Md Emran Hossain
+        changes:
+            - loadData:
+                  encoding: "UTF-8"
+                  file: license_noc_statuses.csv
+                  relativeToChangelogFile: true
+                  tableName: license_noc_statuses
+                  quotchar: '"'
+            - loadData:
+                  encoding: "UTF-8"
+                  file: division.csv
+                  relativeToChangelogFile: true
+                  tableName: divisions
+                  quotchar: '"'
+            - loadData:
+                  encoding: "UTF-8"
+                  file: district.csv
+                  relativeToChangelogFile: true
+                  tableName: districts
+                  quotchar: '"'
+            - loadData:
+                  encoding: "UTF-8"
+                  file: upazila.csv
+                  relativeToChangelogFile: true
+                  tableName: upazilas
+                  quotchar: '"'
+            - loadData:
+                  encoding: "UTF-8"
+                  file: department.csv
+                  relativeToChangelogFile: true
+                  tableName: departments
+                  quotchar: '"'
+            - loadData:
+                  encoding: "UTF-8"
+                  file: form_setup.csv
+                  relativeToChangelogFile: true
+                  tableName: form_setups
+                  quotchar: '"'
+            - loadData:
+                  encoding: "UTF-8"
+                  file: form_field.csv
+                  relativeToChangelogFile: true
+                  tableName: form_fields
+                  quotchar: '"'
+            - loadData:
+                  encoding: "UTF-8"
+                  file: noc_category.csv
+                  relativeToChangelogFile: true
+                  tableName: noc_categories
+                  quotchar: '"'
+            - loadData:
+                  encoding: "UTF-8"
+                  file: license_category.csv
+                  relativeToChangelogFile: true
+                  tableName: license_categories
+                  quotchar: '"'
+            - loadData:
+                  encoding: "UTF-8"
+                  file: address.csv
+                  relativeToChangelogFile: true
+                  tableName: license_noc_addresses
+                  quotchar: '"'
+            - loadData:
+                  encoding: "UTF-8"
+                  file: license_application.csv
+                  relativeToChangelogFile: true
+                  tableName: license_applications
+                  quotchar: '"'
+            - loadData:
+                  encoding: "UTF-8"
+                  file: noc_application.csv
+                  relativeToChangelogFile: true
+                  tableName: noc_applications
+                  quotchar: '"'
+            - loadData:
+                  encoding: "UTF-8"
+                  file: certificate.csv
+                  relativeToChangelogFile: true
+                  tableName: certificates
+                  quotchar: '"'
+            - loadData:
+                  encoding: "UTF-8"
+                  file: payment_setting.csv
+                  relativeToChangelogFile: true
+                  tableName: license_noc_payment_settings
+                  quotchar: '"'
+            - loadData:
+                  encoding: "UTF-8"
+                  file: notice.csv
+                  relativeToChangelogFile: true
+                  tableName: notices
+                  quotchar: '"'

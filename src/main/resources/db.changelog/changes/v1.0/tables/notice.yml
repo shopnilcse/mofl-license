@@ -1,0 +1,82 @@
+#######################################################
+## @author   Md. Emran Hossain                       ##
+## @version  1.0                                     ##
+## @since    31 Jan, 2022                            ##
+#######################################################
+
+databaseChangeLog:
+  - changeSet:
+      id: create notices table
+      author: lnm-service Md. Emran Hossain
+      changes:
+        - createTable:
+            tableName: notices
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: base_type
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: department_id
+                  type: BIGINT
+                  constraints:
+                    nullable: true
+              - column:
+                  name: notice_title
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: notice_details
+                  type: LONGTEXT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: from_date
+                  type: DATE
+                  constraints:
+                    nullable: true
+              - column:
+                  name: to_date
+                  type: DATE
+                  constraints:
+                    nullable: true
+              - column:
+                  name: attachment
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: is_active
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+                  defaultValue: 1
+              - column:
+                  name: created_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_by
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_by
+                  type: BIGINT
+                  constraints:
+                    nullable: false

@@ -1,0 +1,67 @@
+#######################################################
+## @author   Md. Emran Hossain                       ##
+## @version  1.0                                     ##
+## @since    20 Jan, 2022                            ##
+#######################################################
+
+databaseChangeLog:
+  - changeSet:
+      id: create license_noc_addresses table
+      author: lnm-service Md. Emran Hossain
+      changes:
+        - createTable:
+            tableName: license_noc_addresses
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: division_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+#                    foreignKeyName: fk_address_division_id
+#                    references: divisions(id)
+              - column:
+                  name: district_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+#                    foreignKeyName: fk_address_district_id
+#                    references: districts(id)
+              - column:
+                  name: upazila_id
+                  type: BIGINT
+                  constraints:
+                    nullable: true
+#                    foreignKeyName: fk_address_upazila_id
+#                    references: upazilas(id)
+              - column:
+                  name: address_details
+                  type: LONGTEXT
+                  constraints:
+                    nullable: true
+              - column:
+                  name: created_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_by
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_by
+                  type: BIGINT
+                  constraints:
+                    nullable: false

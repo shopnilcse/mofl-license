@@ -1,0 +1,55 @@
+#######################################################
+## @author   Md. Emran Hossain                       ##
+## @version  1.0                                     ##
+## @since    20 Jan, 2022                            ##
+#######################################################
+
+spring:
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  liquibase:
+    change-log: classpath:/db.changelog/db.changelog-master-dev.yml
+    drop-first: true
+    enabled: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/lnm-service?useUnicode=true&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
+    username: postgres
+    password: 123321
+    driver-class-name: org.postgresql.Driver
+    dbcp2:
+      initial-size: 10
+      max-total: 50
+      min-idle: 2
+
+logging:
+  level:
+    org:
+      springframework:
+        web: DEBUG
+      hibernate:
+        SQL: ERROR
+    com:
+      synesisit:
+        lnm: info
+  file:
+    name: C:/log/lnm-service/app.log
+    max-size: 10MB    max-history: 0
+  pattern:
+    file: "%d %-5level [%thread] %logger : %msg%n"
+
+springdoc:
+  swagger-ui:
+    path: lnm-ui
+    tags-sorter: alpha
+    operations-sorter: alpha
+    docExpansion : none
+  api-docs:
+    path: /lnm-docs
+
+acl:
+  url: http://localhost:8201
+endpoint:
+  userdetails: /api/user/get-user-details-by-user-id/
+  citizenuserdetails: /api/user/get-by-id/
+  department: /api/department/get-by-id/

@@ -1,0 +1,3 @@
+created_at,created_by,updated_at,updated_by,base_type,category_id,application_fee,verification_fee,certificate_fee,has_application_fee,has_verification_fee,has_labtest_fee,has_certificate_fee
+2022-03-10 13:14:01.503,1,2022-03-10 13:14:01.503,1,license,1,1000,200,300,true,true,false,true
+2022-03-10 13:14:01.503,1,2022-03-10 13:14:01.503,1,noc,2,800,200,300,true,true,false,true

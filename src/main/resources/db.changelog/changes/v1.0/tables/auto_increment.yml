@@ -1,0 +1,18 @@
+#######################################################
+## @author   Md. Emran Hossain                       ##
+## @version  1.0                                     ##
+## @since    20 Jan, 2022                            ##
+#######################################################
+
+databaseChangeLog:
+  - changeSet:
+      id: add auto increment to tci info table
+      author: tci-service Md Emran Hossain
+      changes:
+        - addAutoIncrement:
+            columnDataType: BIGINT
+            columnName: id
+            incrementBy: 1
+            startWith: 1001
+            tableName: tci_info
+

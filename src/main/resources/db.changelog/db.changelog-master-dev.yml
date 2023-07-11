@@ -1,0 +1,25 @@
+#######################################################
+## @author   Md. Emran Hossain                       ##
+## @version  1.0                                     ##
+## @since    20 Jan, 2022                            ##
+#######################################################
+
+databaseChangeLog:
+  - preConditions:
+      or:
+        dbms:
+          - type: postgresql
+  - property:
+      name: now
+      value: NOW()
+#      dbms: mariadb
+
+  - include:
+      file: changes/v1.0/tables/db.table-changelog.yml
+      relativeToChangelogFile: true
+  - include:
+      file: changes/v1.0/seeds/db.seed-changelog.yml
+      relativeToChangelogFile: true
+#  - include:
+#      file: changes/v1.0/tables/auto_increment.yml
+#      relativeToChangelogFile: true

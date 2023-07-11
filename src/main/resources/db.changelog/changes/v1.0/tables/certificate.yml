@@ -1,0 +1,108 @@
+#######################################################
+## @author   Md. Emran Hossain                       ##
+## @version  1.0                                     ##
+## @since    20 Jan, 2022                            ##
+#######################################################
+
+databaseChangeLog:
+  - changeSet:
+      id: create certificates table
+      author: lnm-service Md. Emran Hossain
+      changes:
+        - createTable:
+            tableName: certificates
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: issued_by
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: issue_date
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: certificate_type
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: application_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: certificate_name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: description
+                  type: LONGTEXT
+                  constraints:
+                    nullable: true
+              - column:
+                  name: expire_date
+                  type: DATE
+                  constraints:
+                    nullable: true
+              - column:
+                  name: renewal_date
+                  type: DATE
+                  constraints:
+                    nullable: true
+              - column:
+                  name: rejection_date
+                  type: DATE
+                  constraints:
+                    nullable: true
+              - column:
+                  name: is_active
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+                  defaultValue: 0
+              - column:
+                  name: is_archived
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+                  defaultValue: 0
+              - column:
+                  name: remarks
+                  type: LONGTEXT
+                  constraints:
+                    nullable: true
+              - column:
+                  name: created_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_by
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_by
+                  type: BIGINT
+                  constraints:
+                    nullable: false

@@ -1,0 +1,19 @@
+created_at,created_by,updated_at,updated_by,name,status_slug,is_submitted,is_application_approved,is_application_fee_paid,is_verified,is_verification_fee_paid,is_lab_tested,is_lab_fee_paid,is_final_approved,is_attachment_approved,is_certificate_fee_paid,is_certificate_issued,is_enothi_approved,is_certificate_expired,is_certificate_renewed
+2022-03-26 13:14:01.503,1,2022-03-26 13:14:01.503,1,Applied for License,applied_for_license,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+2022-03-26 13:14:01.503,1,2022-03-26 13:14:01.503,1,Applied for Noc,applied_for_noc,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+2022-03-26 13:14:01.503,1,2022-03-26 13:14:01.503,1,Application Submitted,application_submitted,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+2022-03-26 13:14:01.503,1,2022-03-26 13:14:01.503,1,Waiting for Application Approval,waiting_for_application_approval,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+2022-03-26 13:14:01.503,1,2022-03-26 13:14:01.503,1,Waiting for Attachment Approval,waiting_for_attachment_approval,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+2022-03-26 13:14:01.503,1,2022-03-26 13:14:01.503,1,Waiting for License Verification,waiting_for_license_verification,1,1,1,0,0,0,0,0,1,0,0,0,0,0
+2022-03-26 13:14:01.503,1,2022-03-26 13:14:01.503,1,Waiting for Lab Test,waiting_for_lab_test,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+2022-03-26 13:14:01.503,1,2022-03-26 13:14:01.503,1,Waiting for e-nothi Approval,waiting_for_e_nothi_approval,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+2022-03-26 13:14:01.503,1,2022-03-26 13:14:01.503,1,Waiting for final Approval,waiting_for_final_approval,1,1,1,1,1,0,0,0,9,0,0,0,0,0
+2022-03-26 13:14:01.503,1,2022-03-26 13:14:01.503,1,Application Approved,application_approved,1,0,0,0,0,0,0,0,9,0,0,0,0,0
+2022-03-26 13:14:01.503,1,2022-03-26 13:14:01.503,1,Application Verified,application_verified,1,1,1,1,0,0,0,0,9,0,0,0,0,0
+2022-03-26 13:14:01.503,1,2022-03-26 13:14:01.503,1,Lab Tested,lab_tested,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+2022-03-26 13:14:01.503,1,2022-03-26 13:14:01.503,1,Attachment Approved,attachment_approved,1,0,0,0,0,0,0,0,1,0,0,0,0,0
+2022-03-26 13:14:01.503,1,2022-03-26 13:14:01.503,1,Final Approved,final_approved,1,1,1,1,1,0,0,1,1,0,0,0,0,0
+2022-03-26 13:14:01.503,1,2022-03-26 13:14:01.503,1,Certificate Expired,certificate_expired,1,1,1,1,1,0,0,1,1,1,1,0,1,0
+2022-03-26 13:14:01.503,1,2022-03-26 13:14:01.503,1,Certificate Issued,certificate_issued,1,1,1,1,1,0,0,1,1,1,1,0,0,0
+2022-03-26 13:14:01.503,1,2022-03-26 13:14:01.503,1,Waiting for License Renewal,waiting_for_license_renewal,1,1,1,1,1,0,0,1,1,1,1,0,1,0
+2022-03-26 13:14:01.503,1,2022-03-26 13:14:01.503,1,Application Denied,application_denied,1,0,0,0,0,0,0,0,0,0,0,0,0,0

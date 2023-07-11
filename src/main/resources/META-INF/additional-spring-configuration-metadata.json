@@ -1,0 +1,27 @@
+{"properties": [
+  {
+    "name": "server.tomcat.max-threads",
+    "type": "java.lang.String",
+    "description": "A description for 'server.tomcat.max-threads'"
+  },
+  {
+    "name": "acl.url",
+    "type": "java.lang.String",
+    "description": "A description for 'acl.url'"
+  },
+  {
+    "name": "endpoint.userdetails",
+    "type": "java.lang.String",
+    "description": "A description for 'endpoint.userdetails'"
+  },
+  {
+    "name": "endpoint.department",
+    "type": "java.lang.String",
+    "description": "A description for 'endpoint.department'"
+  },
+  {
+    "name": "endpoint.citizenuserdetails",
+    "type": "java.lang.String",
+    "description": "A description for 'endpoint.citizenuserdetails'"
+  }
+]}

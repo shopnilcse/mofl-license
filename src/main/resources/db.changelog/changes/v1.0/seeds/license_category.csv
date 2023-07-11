@@ -1,0 +1,7 @@
+created_at,created_by,updated_at,updated_by,category_name,department_id,form_setup_id,expiration_period
+2022-10-26 13:14:01.503,1,2022-10-26 13:14:01.503,1,Poultry Food,1,2,1
+2022-10-26 13:14:01.503,1,2022-10-26 13:14:01.503,1,Fish Food,1,2,2
+2022-10-26 13:14:01.503,1,2022-10-26 13:14:01.503,1,Cattle Health,1,2,3
+2022-10-26 13:14:01.503,1,2022-10-26 13:14:01.503,1,Machine Poultry Food,2,2,3
+2022-10-26 13:14:01.503,1,2022-10-26 13:14:01.503,1,Insecticide,3,2,3
+2022-10-26 13:14:01.503,1,2022-10-26 13:14:01.503,1,Insecticide for field,3,2,3

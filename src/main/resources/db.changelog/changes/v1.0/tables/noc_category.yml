@@ -1,0 +1,64 @@
+#######################################################
+## @author   Md. Emran Hossain                       ##
+## @version  1.0                                     ##
+## @since    20 Jan, 2022                            ##
+#######################################################
+
+databaseChangeLog:
+  - changeSet:
+      id: create noc_categories table
+      author: lnm-service Md. Emran Hossain
+      changes:
+        - createTable:
+            tableName: noc_categories
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: category_name
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: department_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: form_setup_id
+                  type: BIGINT
+                  constraints:
+                    nullable: true
+#                    nullable: false
+#                    foreignKeyName: fk_noc_category_form_setup_id
+#                    references: form_setups(id)
+              - column:
+                  name: expiration_period
+                  type: BIGINT
+                  constraints:
+                    nullable: true
+              - column:
+                  name: created_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_by
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_by
+                  type: BIGINT
+                  constraints:
+                    nullable: false

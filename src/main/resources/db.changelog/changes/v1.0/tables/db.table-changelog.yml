@@ -1,0 +1,67 @@
+#######################################################
+## @author   Md. Emran Hossain                       ##
+## @version  1.0                                     ##
+## @since    20 Jan, 2022                            ##
+#######################################################
+
+databaseChangeLog:
+  - include:
+      file: license_noc_statuses.yml
+      relativeToChangelogFile: true
+  - include:
+      file: division.yml
+      relativeToChangelogFile: true
+  - include:
+      file: district.yml
+      relativeToChangelogFile: true
+  - include:
+      file: upazila.yml
+      relativeToChangelogFile: true
+  - include:
+      file: license_noc_addresses.yml
+      relativeToChangelogFile: true
+  - include:
+      file: form_setup.yml
+      relativeToChangelogFile: true
+  - include:
+      file: form_field.yml
+      relativeToChangelogFile: true
+  - include:
+      file: department.yml
+      relativeToChangelogFile: true
+  - include:
+      file: certificate.yml
+      relativeToChangelogFile: true
+  - include:
+      file: license_category.yml
+      relativeToChangelogFile: true
+  - include:
+      file: license_application.yml
+      relativeToChangelogFile: true
+  - include:
+      file: license_verification.yml
+      relativeToChangelogFile: true
+  - include:
+      file: noc_category.yml
+      relativeToChangelogFile: true
+  - include:
+      file: noc_application.yml
+      relativeToChangelogFile: true
+  - include:
+      file: noc_verification.yml
+      relativeToChangelogFile: true
+  - include:
+      file: license_noc_payment_setting.yml
+      relativeToChangelogFile: true
+  - include:
+      file: noc_lab_test.yml
+      relativeToChangelogFile: true
+  - include:
+      file: noc_application_process_log.yml
+      relativeToChangelogFile: true
+  - include:
+      file: notice.yml
+      relativeToChangelogFile: true
+  - include:
+      file: application_tour_instructions.yml
+      relativeToChangelogFile: true

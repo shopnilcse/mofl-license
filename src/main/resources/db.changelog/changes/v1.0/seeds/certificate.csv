@@ -1,0 +1,4 @@
+created_at,created_by,updated_at,updated_by,user_id,issued_by,issue_date,certificate_type,application_id,certificate_name,description,expire_date,renewal_date,rejection_date,is_active,is_archived,remarks
+2022-03-10 13:14:01.503,1,2022-03-10 13:14:01.503,1,2,1,2021-03-10,License,5,Cattle Food,Cattle food production,2022-03-10,null,null,true,false,null
+2022-03-10 13:14:01.503,1,2022-03-10 13:14:01.503,1,2,1,2021-03-10,License,1,Fish Food,Fish food production,2023-03-10,null,null,true,false,null
+2022-03-10 13:14:01.503,1,2022-03-10 13:14:01.503,1,2,1,2021-03-10,License,6,Poultry Food,Poultry Food production,2024-03-10,null,null,true,false,null

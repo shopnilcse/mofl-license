@@ -1,0 +1,79 @@
+#######################################################
+## @author   Md. Emran Hossain                       ##
+## @version  1.0                                     ##
+## @since    20 Jan, 2022                            ##
+#######################################################
+
+databaseChangeLog:
+  - changeSet:
+      id: create form_fields table
+      author: lnm-service Md. Emran Hossain
+      changes:
+        - createTable:
+            tableName: form_fields
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: form_setup_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_form_field_form_setup_id
+                    references: form_setups(id)
+              - column:
+                  name: field_title
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: field_name
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: input_type
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: is_required
+                  type: BOOLEAN
+                  constraints:
+                    nullable: false
+                  defaultValue: 0
+              - column:
+                  name: position
+                  type: BIGINT
+                  constraints:
+                    nullable: true
+              - column:
+                  name: options
+                  type: JSONB
+                  constraints:
+                    nullable: true
+              - column:
+                  name: created_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_by
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_by
+                  type: BIGINT
+                  constraints:
+                    nullable: false

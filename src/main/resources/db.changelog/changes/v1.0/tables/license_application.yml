@@ -1,0 +1,121 @@
+#######################################################
+## @author   Md. Emran Hossain                       ##
+## @version  1.0                                     ##
+## @since    20 Jan, 2022                            ##
+#######################################################
+
+databaseChangeLog:
+  - changeSet:
+      id: create license_applications table
+      author: lnm-service Md. Emran Hossain
+      changes:
+        - createTable:
+            tableName: license_applications
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: uid
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: applicant_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: license_category_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_license_application_license_category_id
+                    references: license_categories(id)
+              - column:
+                  name: license_noc_status_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_license_application_license_noc_status_uid 
+                    references: license_noc_statuses(id)
+              - column:
+                  name: phone_no
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: present_address_id
+                  type: BIGINT
+                  constraints:
+                    nullable: true
+                    foreignKeyName: fk_license_application_persent_address_id
+                    references: license_noc_addresses(id)
+              - column:
+                  name: permanent_address_id
+                  type: BIGINT
+                  constraints:
+                    nullable: true
+                    foreignKeyName: fk_license_application_permanent_address_id
+                    references: license_noc_addresses(id)
+              - column:
+                  name: nationality
+                  type: varchar(100)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: name_of_nominee
+                  type: varchar(100)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: nominee_nationality
+                  type: varchar(100)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: relation_with_nominee
+                  type: varchar(100)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: nominee_signature
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: nominee_permanent_address_id
+                  type: BIGINT
+                  constraints:
+                    nullable: true
+                    foreignKeyName: fk_license_application_nominee_permanent_address_id
+                    references: license_noc_addresses(id)
+              - column:
+                  name: dynamic_fields
+                  type: JSONB
+                  constraints:
+                    nullable: true
+              - column:
+                  name: created_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: created_by
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_by
+                  type: BIGINT
+                  constraints:
+                    nullable: false
